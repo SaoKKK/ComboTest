@@ -23,4 +23,17 @@
     // Insert code here to tear down your application
 }
 
+- (IBAction)comboPageRange:(id)sender {
+    if ([sender indexOfSelectedItem] == 0) {
+        [sender setStringValue:@"All Pages"];
+        [_window makeFirstResponder:nil];
+        [sender setEditable:NO];
+        
+    }else if([sender indexOfSelectedItem] == 1){
+        [sender setStringValue:@""];
+        [sender setEditable:YES];
+        [_window makeFirstResponder:sender];
+    }
+}
+
 @end
