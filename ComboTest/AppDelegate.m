@@ -65,7 +65,12 @@
                     return;
                 } else if (pages.count == 1) {
                     //"-"が含まれない場合
-                    [pageRange addIndex:[range integerValue]];
+                    if ([range integerValue] <= totalPage){
+                        [pageRange addIndex:[range integerValue]];
+                    } else {
+                        [self showPageRangeError:@"ページ範囲の指定に不正があります。"];
+                        return;
+                    }
                 } else if ([[pages objectAtIndex:0]isEqualToString:@""]) {
                     //"-"が先頭にある場合
                     [pageRange addIndexesInRange:NSMakeRange(1,[[pages objectAtIndex:1]integerValue])];
