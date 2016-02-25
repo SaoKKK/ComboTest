@@ -44,7 +44,7 @@
     NSString *indexString = comboPageRange.stringValue;
     NSMutableIndexSet *pageRange = [NSMutableIndexSet indexSet];
     if ([indexString isEqualToString:@"All Pages"]) {
-        pageRange = [NSMutableIndexSet indexSetWithIndexesInRange:NSMakeRange(1, totalPage)];
+        [pageRange addIndexesInRange:NSMakeRange(1, totalPage)];
     } else {
         //入力値に不正な文字列が含まれないかチェック
         NSCharacterSet *pgRangeChrSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789,-"];
