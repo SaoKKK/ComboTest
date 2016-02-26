@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B98EEE5F1C81077500E5421B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B98EEE611C81077500E5421B /* Localizable.strings */; };
 		B9B81A801C61046600C4360D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B81A7F1C61046600C4360D /* AppDelegate.m */; };
 		B9B81A831C61046700C4360D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B81A821C61046700C4360D /* main.m */; };
 		B9B81A851C61046700C4360D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B81A841C61046700C4360D /* Assets.xcassets */; };
@@ -14,13 +15,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B98EEE5B1C81029E00E5421B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B98EEE5C1C81034200E5421B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		B98EEE5E1C81035100E5421B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ja; path = ja.lproj/Info.plist; sourceTree = "<group>"; };
+		B98EEE601C81077500E5421B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B98EEE621C81077A00E5421B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B9B81A7B1C61046600C4360D /* ComboTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComboTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B81A7E1C61046600C4360D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B9B81A7F1C61046600C4360D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B9B81A821C61046700C4360D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9B81A841C61046700C4360D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9B81A871C61046700C4360D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B9B81A891C61046700C4360D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +62,6 @@
 				B9B81A7F1C61046600C4360D /* AppDelegate.m */,
 				B9B81A841C61046700C4360D /* Assets.xcassets */,
 				B9B81A861C61046700C4360D /* MainMenu.xib */,
-				B9B81A891C61046700C4360D /* Info.plist */,
 				B9B81A811C61046700C4360D /* Supporting Files */,
 			);
 			path = ComboTest;
@@ -66,7 +70,9 @@
 		B9B81A811C61046700C4360D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B98EEE5D1C81034200E5421B /* Info.plist */,
 				B9B81A821C61046700C4360D /* main.m */,
+				B98EEE611C81077500E5421B /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -112,6 +118,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = B9B81A721C61046600C4360D;
 			productRefGroup = B9B81A7C1C61046600C4360D /* Products */;
@@ -130,6 +137,7 @@
 			files = (
 				B9B81A851C61046700C4360D /* Assets.xcassets in Resources */,
 				B9B81A881C61046700C4360D /* MainMenu.xib in Resources */,
+				B98EEE5F1C81077500E5421B /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,10 +156,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B98EEE5D1C81034200E5421B /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B98EEE5C1C81034200E5421B /* Base */,
+				B98EEE5E1C81035100E5421B /* ja */,
+			);
+			name = Info.plist;
+			sourceTree = "<group>";
+		};
+		B98EEE611C81077500E5421B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B98EEE601C81077500E5421B /* Base */,
+				B98EEE621C81077A00E5421B /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		B9B81A861C61046700C4360D /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B9B81A871C61046700C4360D /* Base */,
+				B98EEE5B1C81029E00E5421B /* ja */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -243,7 +270,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ComboTest/Info.plist;
+				INFOPLIST_FILE = ComboTest/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = Sao.ComboTest;
@@ -256,7 +283,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ComboTest/Info.plist;
+				INFOPLIST_FILE = ComboTest/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = Sao.ComboTest;
@@ -283,6 +310,7 @@
 				B9B81A8E1C61046700C4360D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
