@@ -682,20 +682,18 @@
                     <comboBox verticalHuggingPriority="750" id="TsC-as-Byo">
                         <rect key="frame" x="20" y="54" width="152" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <comboBoxCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" title="All Pages" drawsBackground="YES" completes="NO" numberOfVisibleItems="2" id="GRU-pT-Yli">
+                        <comboBoxCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" title="All Pages" drawsBackground="YES" completes="NO" usesDataSource="YES" numberOfVisibleItems="2" id="GRU-pT-Yli">
                             <font key="font" metaFont="smallSystem"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <allowedInputSourceLocales>
                                 <string>NSAllRomanInputSourcesLocaleIdentifier</string>
                             </allowedInputSourceLocales>
-                            <objectValues>
-                                <string>All Pages</string>
-                                <string>e.g. 1-2,5,10</string>
-                            </objectValues>
                         </comboBoxCell>
                         <connections>
                             <action selector="comboPageRange:" target="Voe-Tx-rLC" id="mRW-no-phm"/>
+                            <outlet property="dataSource" destination="Voe-Tx-rLC" id="Jvp-jK-wn5"/>
+                            <outlet property="delegate" destination="Voe-Tx-rLC" id="aSl-vZ-eho"/>
                         </connections>
                     </comboBox>
                     <button verticalHuggingPriority="750" id="w0o-Hv-nuF">
