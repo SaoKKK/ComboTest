@@ -15,14 +15,28 @@
 
 @implementation AppDelegate{
     IBOutlet NSComboBox *comboPageRange;
+    NSArray *comboData;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    //コンボボックスのデータソース用配列を作成
+    comboData = [NSArray arrayWithObjects:@"All Pages",@"e.g. 1-2,5,10",nil];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+}
+
+#pragma mark - comboBox data source method
+
+//コンボボックスのデータソースのアイテム数を返す
+- (NSInteger)numberOfItemsInComboBox:(NSComboBox *)aComboBox{
+    return comboData.count;
+}
+
+//各インデクスのオブジェクトバリューを返す
+- (id)comboBox:(NSComboBox *)aComboBox objectValueForItemAtIndex:(NSInteger)index{
+    return [comboData objectAtIndex:index];
 }
 
 - (IBAction)comboPageRange:(id)sender {
@@ -65,7 +79,7 @@
                     return;
                 } else if (pages.count == 1) {
                     //"-"が含まれない場合
-                    if ([range integerValue] <= totalPage){
+                    if ([range integerValue] <= totalPage && [range integerValue] > 0){
                         [pageRange addIndex:[range integerValue]];
                     } else {
                         [self showPageRangeError:@"ページ範囲の指定に不正があります。"];
