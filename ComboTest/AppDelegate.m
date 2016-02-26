@@ -20,7 +20,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     //コンボボックスのデータソース用配列を作成
-    comboData = [NSArray arrayWithObjects:@"All Pages",@"e.g. 1-2,5,10",nil];
+    comboData = [NSArray arrayWithObjects:NSLocalizedString(@"ALL_PAGES", @""),@"e.g. 1-2,5,10",nil];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -41,7 +41,7 @@
 
 - (IBAction)comboPageRange:(id)sender {
     if ([sender indexOfSelectedItem] == 0) {
-        [sender setStringValue:@"All Pages"];
+        [sender setStringValue:NSLocalizedString(@"ALL_PAGES", @"")];
         [_window makeFirstResponder:nil];
         [sender setEditable:NO];
     }else if([sender indexOfSelectedItem] == 1){
@@ -57,7 +57,7 @@
     NSUInteger totalPage = 10;   //仮決めのページ総数
     NSString *indexString = comboPageRange.stringValue;
     NSMutableIndexSet *pageRange = [NSMutableIndexSet indexSet];
-    if ([indexString isEqualToString:@"All Pages"]) {
+    if ([indexString isEqualToString:NSLocalizedString(@"ALL_PAGES", @"")]) {
         [pageRange addIndexesInRange:NSMakeRange(1, totalPage)];
     } else {
         //入力値に不正な文字列が含まれないかチェック
